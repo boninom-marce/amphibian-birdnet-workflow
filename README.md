@@ -11,10 +11,14 @@ While this repository uses Patagonian amphibians as a core baseline, the underly
 The workflow is organized into three critical stages, built upon practical field experience with acoustic data:
 
 * **Stage I (Data Curation and Labeling Criteria):** Focuses on defining a rigorous "Gold Standard". Signal quality categories may be used during manual curation, but training is performed using a binary presence/absence approach. A precautionary principle is applied: if a signal cannot be confidently identified by an experienced observer, it is excluded to avoid introducing ambiguity into the model's learning process.
+(Protocols: 01_labeling)
 
-* **Stage II (Custom Model Training):** A guide for binary training (presence/absence) using embeddings. Special emphasis is placed on creating a robust "Noise" class that captures the biotic and abiotic variability of the local soundscape (wind, rain, technical interference, other species) to drastically minimize false positives.
+* **Stage II (Custom Model Training and Analysis):** A guide for binary training (presence/absence) using embeddings. Special emphasis is placed on creating a robust "Noise" class that captures the biotic and abiotic variability of the local soundscape (wind, rain, technical interference, other species) to drastically minimize false positives.
+(Protocols: 02_training and 03_analysis)
 
-* **Stage III (Evaluation and Validation):** A protocol to measure real-world performance. We address critical technical challenges, such as implementing relative time tracking (`File Offset`) in Raven Pro and generating manual duration columns to ensure temporal alignment between expert annotations and BirdNET's fixed analysis windows.
+* **Stage III (Evaluation, Validation, and Troubleshooting):** A protocol to measure real-world performance. We address critical technical challenges, such as implementing relative time tracking (`File Offset`) in Raven Pro and generating manual duration columns to ensure temporal alignment between expert annotations and BirdNET's fixed analysis windows.
+(Protocols: 04_validation and 05_common_problems)
+
 
 ## 📂 Repository Structure
 
