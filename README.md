@@ -26,22 +26,40 @@ The workflow is organized into three critical stages, built upon practical field
 
 ```text
 repository/
-├── README.md                 # Project overview and quick start guide
-├── classifiers/              # Compact .tflite models and labels.txt files
-├── protocols/
-│   ├── 01_labeling.md        # Criteria for what to label (clear vs. doubtful signals)
-│   ├── 02_training.md        # Folder organization and "Train" tab configuration
-│   ├── 03_analysis.md        # Running the custom classifier on new field recordings
-│   ├── 04_validation.md      # Using evaluation tools and adjusting confidence thresholds
-│   └── 05_common_problems.md # Troubleshooting temporal misalignment and false positives
-├── examples/                 # Representative target signals and "noise class" audio clips
-├── evaluation/               # Performance validation templates and sample outputs
-├── scripts/
-│   └── optional/             # Optional scripts for score interpretation and post-processing
-├── figures/                  # Spectrogram examples and workflow diagrams
-├── LICENSE                   # Open-source licensing information
-└── CITATION.cff              # Citation metadata for academic use
+│
+├── README.md               # Overview, project mission, and links to protocols
+├── CITATION.cff            # Academic citation metadata
+├── LICENSE                 # Project open-source license
+│
+├── classifiers/            # Folder for custom classifiers
+│   ├── species_1/          # Contains model.tflite
+│   ├── species_2/
+│   └── ...
+│
+├── protocols/              # SOPs for the workflow
+│   ├── 01_labeling.md
+│   ├── 02_training.md
+│   ├── 03_analysis.md
+│   ├── 04_validation.md
+│   └── 05_common_problems.md
+│
+├── examples/               # Case studies (one per species)
+│   ├── species_1/
+│   │   ├── raw_audio.wav
+│   │   ├── gold_standard_labels.csv
+│   │   ├── birdnet_output.txt
+│   │   ├── evaluation_results.csv
+│   │   └── screenshots/    # Spectrograms and Raven visualization examples
+│   ├── species_2/
+│   │   └── ...
+│   └── README.md           # Instructions on how to use these study cases
+│
+├── scripts/                # Utility scripts for workflow automation
+│   └── optional/           # Non-essential but helpful scripts (e.g., CSV formatting)
+│
+└── figures/                # Global figures (workflow diagrams, project logos)
 ```
+
 
 ## 🦎 Critical Decisions & Labeling Criteria
 
