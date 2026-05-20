@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this workflow or the associated classifiers, please cite it as follows:"
+title: "Amphibian Monitoring: Open-Source Solutions and AI-Based Detection"
+authors:
+- family-names: "Bonino"
+    given-names: "Marcelo F."
+  - family-names: "Denham"
+    given-names: "Mónica M."
+  - family-names: "Areta"
+    given-names: "Javier A."
+  - family-names: "Basti"
+    given-names: "Marian"
+  - family-names: "Lozano Aguilar"
+    given-names: "Enrique"
+  - family-names: "Rocchi"
+    given-names: "Maximiliano"
+  - family-names: "Pozzi"
+    given-names: "Carla"
+  - family-names: "Carp"
+    given-names: "Anabella"
+  - family-names: "Nielsen"
+    given-names: "Juliana"
+  - family-names: "Bascary"
+    given-names: "Emilio"
+  - family-names: "Bahía"
+    given-names: "Rocío" 
+
+   orcid: "https://orcid.org/0000-0003-1189-0646”
+identifiers:
+  - type: url
+    value: "https://github.com/boninom-marce/amphibian-birdnet-workflow"
+    description: "GitHub repository URL"
+date-released: 2026-05-20
+url: "https://github.com/boninom-marce/amphibian-birdnet-workflow"
+abstract: >
+  This repository provides an end-to-end technical framework and reproducible 
+  protocols for the automatic detection of Patagonian amphibian acoustic signals. 
+  By leveraging BirdNET-Analyzer and custom embedding-based classifiers, 
+  it addresses analytical bottlenecks in Passive Acoustic Monitoring (PAM). 
+  This project is supported by WILDLABS.net and Arm.
+keywords:
+  - "bioacoustics"
+  - "passive acoustic monitoring"
+  - "amphibians"
+  - "machine learning"
+  - "birdnet-analyzer"
+  - "patagonia"
+license: "MIT" 
