@@ -56,7 +56,8 @@ Navigate to the **"Evaluation"** tab in the BirdNET-Analyzer GUI:
 
 * **Annotations:** Load your aligned "Gold Standard" table.
 * **Predictions:** Load your aligned "BirdNET Output" file.
-* **Column Mapping:** * Start Time -> `File Offset (s)`
+* **Column Mapping:** 
+  * Start Time -> `File Offset (s)`
   * End Time -> `Corrected_End_Time`
   * Recording -> `Begin File`
   * Duration -> `Duration` (Ensure this column is present in your CSV; if your files are 60s, populate the entire column with "60").
