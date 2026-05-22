@@ -13,7 +13,7 @@ Each subfolder corresponds to a unique species and contains the necessary files 
 3. **BirdNET-Analyzer:** - Open the BirdNET-Analyzer GUI.
   - Navigate to the **"Custom classifier"** section.
   - Select the folder containing your desired model and label files.
-  - Adjust the **"Confidence threshold"** according to your field validation results (refer to our [Validation Protocol](../protocols/04_validation.md)).
+  - Adjust the **"Confidence threshold"**. See Analysis and Validation sections in protocols (refer to our [Analysis Protocol](../protocols/03_analysis.md) [Validation Protocol](../protocols/04_validation.md)).
 
 ## Disclaimer
 These models are tailored to specific acoustic environments. Performance may vary when applied to recording sites with significantly different ambient noise or biotic composition. Please consult the `examples/` directory to see performance benchmarks for these models.
