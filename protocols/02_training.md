@@ -11,7 +11,7 @@ To generate a custom model file (`.tflite`) capable of identifying your target s
 Open the **BirdNET-Analyzer GUI** and navigate to the **"Train"** tab.
 
 * **Training Data:** Select the root folder organized in Protocol 01 (e.g., `/training_data/`). This folder must contain your subfolders for the `target-species` and the `NOISE` class.
-* **Classifier Output:** Choose your destination folder and assign a name to your model (e.g., `TargetSpecies_Detector_V1`). The system will automatically append the `.tflite` extension.
+* **Classifier Output:** Choose your destination folder and assign a name to your model (e.g., `TargetSpecies_Detector_V1`). BirdNET will generate the classifier as a `.tflite` model file.
 * **Model Save Mode:** Select **"Replace"**. This creates a detector dedicated exclusively to your target species, replacing the default BirdNET global list for maximum efficiency in your project.
 
 ---
