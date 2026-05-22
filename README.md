@@ -46,7 +46,7 @@ repository/
 │   ├── 04_validation.md
 │   └── 05_common_problems.md
 │
-├── examples/               # Reproducible case studies (one per species)
+├── examples/               # Reproducible case studies and validation datasets
 │   ├── Rhinoderma_darwinii/
 │   │   ├── *.wav
 │   │   ├── gold_standard_labels.csv
