@@ -70,7 +70,7 @@ repository/
 ```
 
 
-## 🦎 Critical Decisions & Labeling Criteria
+## 🦎 Core Methodological Principles
 
 To guarantee a robust and reliable machine learning model, the protocols in this repository enforce strict data curation rules:
 
