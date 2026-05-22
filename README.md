@@ -58,6 +58,7 @@ repository/
 │   └── optional/           # Non-essential but helpful scripts (e.g., CSV formatting)
 │
 └── figures/                # Global figures (workflow diagrams, project logos)
+
 ```
 
 
