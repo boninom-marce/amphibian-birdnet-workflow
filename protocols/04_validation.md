@@ -73,4 +73,34 @@ Click **"Calculate Metrics"**. BirdNET will compare segments and provide:
 * **Score-Threshold Analysis:** BirdNET provides a curve showing how model performance changes with different confidence scores. 
 
 > **Note:** You can manually determine an appropriate **Confidence Threshold** (e.g., 0.8) by analyzing the precision-recall and score-threshold relationships, depending on whether the application prioritizes sensitivity or minimizing false positives.
+>
+> > **Important Limitation of BirdNET Evaluation Metrics:**  
+> The BirdNET-Analyzer evaluation tool computes metrics exclusively from the information present in the **Gold Standard** and **Prediction** tables. Consequently, audio files containing neither expert annotations nor BirdNET detections are automatically excluded from the evaluation dataset.
+>
+> This means that recordings representing true absences (i.e., files with no biological activity and no false positives) do not contribute to the calculation of evaluation metrics. As a result:
+>
+> * **True Negatives (TN)** are not robustly represented.
+> * Metrics strongly dependent on TN counts (especially **Accuracy** and, in some cases, **AUROC**) may become misleading or artificially inflated.
+> * **Precision**, **Recall**, and **F1-score** are generally more informative and biologically relevant for Passive Acoustic Monitoring (PAM) applications focused on event detection.
+>
+> For ecological applications involving rare-event detection (e.g., amphibian calling activity), we therefore recommend prioritizing:
+>
+> * Precision–Recall relationships
+> * Confidence-threshold behavior
+> * Manual inspection of high-confidence false positives
+>
+> rather than relying on Accuracy as a primary performance metric.
+>
+> > **Optional Strategy for Including Empty Recordings:**  
+> Because BirdNET-Analyzer evaluation is primarily driven by the contents of the annotation and prediction tables, recordings with neither annotations nor detections may be excluded from the evaluated dataset.
+>
+> To preserve the full sampling effort and potentially improve representation of negative recordings, users may optionally include placeholder annotations in files with no target activity:
+>
+> * Create a very short manual selection (e.g., 0.0–0.1 s) in Raven Pro.
+> * Assign a non-target label such as `Noise`, `Background`, or `Empty`.
+> * Ensure metadata consistency (`Recording`, `Duration`, and temporal fields).
+>
+> This procedure may help BirdNET recognize the existence and duration of otherwise empty recordings during evaluation, potentially improving the representation of negative samples in confusion-matrix calculations.
+>
+> However, because BirdNET-Analyzer's internal evaluation logic is not fully documented, users should independently verify how these placeholder annotations affect True Negative estimation and derived metrics.
 
