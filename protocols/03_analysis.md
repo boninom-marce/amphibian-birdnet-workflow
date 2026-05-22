@@ -7,6 +7,11 @@ This protocol explains how to apply the custom classifier (`.tflite`) developed 
 To use the trained model to identify the target species in new acoustic data, transforming raw recordings into selection tables compatible with Raven Pro.
 
 ---
+## 📋 Prerequisites
+Before starting, ensure you have the required software installed:
+* **BirdNET-Analyzer (GUI):** Download the Windows or macOS installer directly from the [BirdNET-Analyzer Releases page on GitHub](https://github.com/birdnet-team/BirdNET-Analyzer/releases).
+* **Raven Pro / Raven Lite:** Required for visual auditing. Available from the [Cornell Center for Conservation Bioacoustics](https://ravensoundsoftware.com/).
+---
 
 ## 💻 Step 1: BirdNET-Analyzer Configuration
 Open the **BirdNET-Analyzer GUI** and navigate to the **"Multiple Files"** tab.
