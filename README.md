@@ -31,12 +31,15 @@ repository/
 ├── CITATION.cff            # Academic citation metadata
 ├── LICENSE                 # Project open-source license
 │
-├── classifiers/            # Folder for custom classifiers
-│   ├── species_1/          # Contains model.tflite
-│   ├── species_2/
-│   └── ...
+├── classifiers/                  # Custom BirdNET classifiers for six amphibian species
+│   ├── Rhinoderma_darwinii/
+│   ├── Batrachyla_leptopus/
+│   ├── Batrachyla_taeniata/
+│   ├── Batrachyla_antartandica/
+│   ├── Hylorina_sylvatica/
+│   └── Pleurodema_thaul/
 │
-├── protocols/              # SOPs for the workflow
+├── protocols/              # Step-by-step workflow documentation
 │   ├── 01_labeling.md
 │   ├── 02_training.md
 │   ├── 03_analysis.md
@@ -44,15 +47,20 @@ repository/
 │   └── 05_common_problems.md
 │
 ├── examples/               # Case studies (one per species)
-│   ├── species_1/
-│   │   ├── raw_audio.wav
+│   ├── Rhinoderma_darwinii/
+│   │   ├── *.wav
 │   │   ├── gold_standard_labels.csv
 │   │   ├── birdnet_output.txt
-│   │   ├── evaluation_results.csv
-│   │   └── screenshots/    # Spectrograms and Raven visualization examples
-│   ├── species_2/
-│   │   └── ...
-│   └── README.md           # Instructions on how to use these study cases
+│   │   ├── results_evaluation_table.csv
+│   │   ├── Evaluation_data_table.csv
+│   │   └── screenshots/
+│   │
+│   ├── Batrachyla_leptopus/
+│   ├── Batrachyla_taeniata/
+│   ├── Batrachyla_antartandica/
+│   ├── Hylorina_sylvatica/
+│   ├── Pleurodema_thaul/
+│   └── README.md                 # Instructions for reproducing the examples
 │
 ├── scripts/                # Utility scripts for workflow automation
 │   └── optional/           # Non-essential but helpful scripts (e.g., CSV formatting)
