@@ -4,7 +4,7 @@ This directory provides example datasets to test and validate custom classifiers
 
 ## Dataset Structure
 Each species folder contains:
-- **`audio.wav`**: A set of acoustic samples (~1 minute each) containing representative target vocalizations..
+- **`audio.wav`**: A set of 10 acoustic samples (~1 minute each) containing representative target vocalizations.
 - **`gold_standard_labels.csv`**: Expert annotations (the "Gold Standard").
 - **`birdnet_output.txt`**: Raw output from BirdNET-Analyzer.
 - **`evaluation_results.csv`**: Performance metrics derived from the comparison between the output and the gold standard.
