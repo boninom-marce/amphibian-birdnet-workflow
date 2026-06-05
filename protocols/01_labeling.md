@@ -2,8 +2,8 @@
 
 The objective of this stage is to create a clean, robust training dataset. We will generate two organized folders: one containing the target species' calls and another containing representative noise, to feed the model.
 
-## 1. Defining the "Gold Standard"
-To ensure the model learns efficiently, we follow strict curation rules for every single selection.
+## 1. Defining the Training Dataset
+To maximize model performance and reduce label noise, we follow strict curation rules for every selection included in the training dataset.
 
 * **Evident Signals Only:** Label acoustic events only if they are clearly audible and distinctly visible on the spectrogram.
 * **The Golden Rule #1 (Precautionary Principle):** *"If you are not sure it is correct, consider it incorrect."* Labeling faint, highly masked, or ambiguous signals weakens the clear acoustic signature the model is attempting to learn.
