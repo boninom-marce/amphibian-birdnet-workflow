@@ -12,7 +12,32 @@ Performance validation is only valid if performed on data distinct from the trai
 
 * **Representativeness:** Select recordings that span different monitoring sites, times of day, and environmental conditions (e.g., wind/rain variability).
 * **Independence:** Never use files from your training set for evaluation; this leads to biased, artificially high accuracy metrics.
-* **Gold Standard Curation:** Expert-labeled signals must strictly follow the "Gold Standard" rules (evident signals only, as defined in Protocol 01).
+
+## Building the Gold Standard
+
+The evaluation dataset must first be manually reviewed by an experienced observer to generate a **Gold Standard** annotation table.
+
+The Gold Standard should be created from recordings that were **never used during model training** and should represent the range of acoustic and environmental conditions expected during deployment.
+
+During manual annotation:
+
+* Label target signals following the curation criteria described in Protocol 01.
+* Include all confidently identifiable target events within the selected recordings.
+* Use the same species nomenclature that will be used in the BirdNET output.
+* Save the resulting Raven selection table as the reference dataset for model evaluation.
+
+**This expert-labeled dataset constitutes the benchmark against which BirdNET predictions will be compared.**
+
+## Audio Format Consistency
+
+Before creating the Gold Standard in Raven Pro, all recordings included in the evaluation dataset should share the same audio characteristics.
+
+We strongly recommend:
+
+* Using a single sampling rate across all files (e.g., all recordings resampled to 48 kHz).
+* Using a consistent channel configuration throughout the evaluation dataset (all mono or all stereo).
+
+This recommendation is primarily practical. Raven Pro may present difficulties when handling mixed audio formats within the same annotation workflow, particularly when combining mono recordings (e.g., AudioMoth) with stereo recordings (e.g., SM4 or SM2 recorders). Standardizing files before annotation helps ensure a smoother and more consistent curation process.
 
 ---
 
@@ -77,7 +102,7 @@ Click **"Calculate Metrics"**. BirdNET will compare segments and provide:
 >
 ## ⚠️ Caution: Interpretation of Evaluation Metrics
 
-The BirdNET-Analyzer evaluation tool computes metrics exclusively from the information present in the **Gold Standard** and **Prediction** tables. Consequently, audio files containing neither expert annotations nor BirdNET detections may be excluded from the evaluated dataset.
+The BirdNET-Analyzer evaluation tool computes metrics exclusively from the information present in the **Gold Standard** and **Prediction** tables. Consequently, **audio files containing neither expert annotations nor BirdNET detections may be excluded from the evaluated dataset**.
 
 This means that recordings representing true absences (i.e., files with no biological activity and no false positives) may not contribute to the calculation of evaluation metrics. As a result:
 
