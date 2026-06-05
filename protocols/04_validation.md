@@ -36,7 +36,7 @@ You must format both your Raven table (*Gold Standard*) and your analysis result
    * `Begin File`: Filename of the `.wav`.
    * `File Offset (s)`: Start time relative to the file start.
    * `Delta Time (s)`: Duration of the selection.
-   * `Common_Name`: Species name associated with the detection.
+   * `Common_Name (or equivalent species-label column)`: Species name associated with the detection.
    * `Duration` (File Duration): Total duration of the audio file. **Important Note:** Raven Pro does *not* export this automatically. You must manually create this column and populate it with the total duration of your files (e.g., if your recordings are 60 seconds long, enter `60` for every row).
 
 2. **Calculate End Time:** If temporal inconsistencies are detected, create a custom end-time column (e.g., `Corrected_End_Time`) in both files using the same calculation logic.
