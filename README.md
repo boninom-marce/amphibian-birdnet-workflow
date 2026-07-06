@@ -70,17 +70,15 @@ repository/
 ```
 
 
-## 🦎 Core Methodological Principles
+## 🦎 Core Data Curation Principles
 
-To guarantee a robust and reliable machine learning model, the protocols in this repository enforce strict data curation rules:
+To guarantee a robust and reliable machine learning model, the protocols in this repository enforce strict data curation criteria during manual annotation:
 
-* **Evident Signals Only:** Label acoustic events only if they are clearly audible and distinctly visible on the spectrogram.
+* **Evident Signals Only (Precautionary Principle):** Label acoustic events only if they are clearly audible and distinctly visible on the spectrogram. Guideline: "If you are not sure it is correct, consider it incorrect." Labeling faint, highly masked, or ambiguous signals weakens the clear acoustic signature the model attempts to learn.
 
-* **The Golden Rule #1 (Precautionary Principle):** *"If you are not sure it is correct, consider it incorrect."* Labeling faint, highly masked, or ambiguous signals weakens the clear acoustic signature the model is attempting to learn.
+* **TStrict Noise Purity:** *The negative class dataset (the NOISE folder) must feature an absolute absence of the target species' signals. Including even faint traces of the target species within this category introduces contradictory features to the algorithm, degrading classifier precision.
 
-* **The Golden Rule  #2 (Noise Purity):** *The NOISE folder (non-event class) must have an absolute absence of the target species' signal. Including even faint traces of the target species in this folder sends contradictory messages to the algorithm.
-
-* **Representativeness:** The training dataset must encompass spatial (inter-population) and temporal (varying weather conditions, seasons) variability to maximize the model's ability to generalize across different environments.
+* **Representativeness:** The training dataset must encompass spatial (inter-population) and temporal (varying weather conditions, seasons) variability to maximize the model's capacity to generalize across diverse environments.
 
 ---
 
